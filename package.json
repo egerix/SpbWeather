@@ -1,0 +1,26 @@
+{
+  "name": "SimpleWeb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx webpack --watch",
+    "build": "npx webpack"
+  },
+  "repository": "https://github.com/egerix/SimpleWeb.git",
+  "author": "egorivanov <egorivanov@yamoney.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chart.js": "^2.9.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1"
+  }
+}
