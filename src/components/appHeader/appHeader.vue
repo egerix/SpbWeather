@@ -11,18 +11,23 @@
 </template>
 
 <script>
+import {mapMutations, mapState} from 'vuex'
+
 export default {
   name: 'AppHeader',
-  props: {
-    cityName: String
+  computed: {
+    ...mapState({
+      cityName: state => state.city.cityInfo.name
+    }),
   },
   methods: {
+    ...mapMutations(["changeCityInfo"]),
     citySelected(id, name) {
-      this.$emit('citySelected', {id, name})
+      this.changeCityInfo({id, name})
     }
   }
 }
 </script>
 
-<style src="./AppHeader.css" scoped>
+<style src="./appHeader.css" scoped>
 </style>

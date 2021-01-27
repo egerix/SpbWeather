@@ -4,12 +4,13 @@ import VueMaterial from 'vue-material'
 import { MdButton } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
+import { store } from './store'
 
 Vue.config.productionTip = false
 Vue.use(MdButton)
 Vue.use(VueMaterial)
 
-
 new Vue({
+  store,
   render: h => h(App),
 }).$mount('#app')

@@ -12,16 +12,19 @@
 </template>
 
 <script>
-import CityInfo from "@/components/city-info/CityInfo";
-import InfoRow from "@/components/info-row/InfoRow";
+import CityInfo from "@/components/city-info/cityInfo";
+import InfoRow from "@/components/info-row/infoRow";
 import weatherService from "@/js/weatherService";
 import {hpaToMmHg, kelvinToCelsius} from "@/js/converters";
+import {mapState} from "vuex";
 
 export default {
   name: 'InfoBlock',
   components: {InfoRow, CityInfo},
-  props: {
-    cityInfo: Object
+  computed: {
+    ...mapState({
+      cityInfo: state => state.city.cityInfo
+    }),
   },
   data() {
     return {

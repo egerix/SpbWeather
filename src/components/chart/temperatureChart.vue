@@ -2,12 +2,15 @@
 import weatherService from "@/js/weatherService"
 import {Line} from "vue-chartjs"
 import {kelvinToCelsius} from "@/js/converters";
+import {mapState} from "vuex";
 
 export default {
   name: 'TemperatureChart',
   extends: Line,
-  props: {
-    cityId: Number
+  computed: {
+    ...mapState({
+      cityId: state => state.city.cityInfo.id
+    })
   },
   data() {
     return {

@@ -1,21 +1,21 @@
 <template>
   <div id="app">
-    <app-header :city-name="cityInfo.name" @citySelected="citySelected"></app-header>
+    <app-header></app-header>
     <div class="content">
       <div class="content__left">
-        <info-block :city-info="cityInfo"></info-block>
+        <info-block></info-block>
       </div>
       <div class="content__right">
-        <temperature-chart class="chart" :cityId="cityInfo.id"></temperature-chart>
+        <temperature-chart class="chart"></temperature-chart>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import TemperatureChart from "@/components/chart/TemperatureChart";
-import AppHeader from "@/components/AppHeader/AppHeader";
-import InfoBlock from "@/components/info-block/InfoBlock";
+import TemperatureChart from "@/components/chart/temperatureChart";
+import AppHeader from "@/components/appHeader/appHeader";
+import InfoBlock from "@/components/info-block/infoBlock";
 
 export default {
   name: 'App',
@@ -23,19 +23,6 @@ export default {
     InfoBlock,
     AppHeader,
     TemperatureChart,
-  },
-  data() {
-    return {
-      cityInfo: {
-        name: "Санкт-Петербург",
-        id: 498817
-      }
-    }
-  },
-  methods: {
-    citySelected(cityInfo) {
-      this.cityInfo = cityInfo
-    }
   }
 }
 </script>
