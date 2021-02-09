@@ -1,0 +1,63 @@
+body {
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
+	margin-top: 60px;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0 8px 0 8px;
+	font-family: 'JetBrains Mono', serif;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	height: 800px;
+}
+
+.info-block {
+	flex-grow: 1;
+	max-width: 400px;
+}
+
+.weather-info-row {
+	display: flex;
+	justify-content: stretch;
+	margin-bottom: 5px;
+}
+.weather-info-row__value {
+	text-align: right;
+	flex-grow: 1;
+}
+.weather-info-row__measure {
+	margin-left: 10px;
+	text-align: left;
+	width: 50px;
+}
+
+.app-header {
+	padding-bottom: 30px;
+}
+
+.app-header__title {
+	padding-bottom: 20px;
+}

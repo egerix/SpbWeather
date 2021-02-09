@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Погода Спб</title>
+</head>
+<body>
+<div class="app-header">
+    <div class="app-header__title" id="cityName"></div>
+    <div class="app-header__buttons">
+        <button onclick="citySelected({id:498817,name:'Санкт-Петербург'})">Санкт-Петербург</button>
+        <button onclick="citySelected({id:511196,name:'Пермь'})">Пермь</button>
+        <button onclick="citySelected({id:484907,name:'Таганрог'})">Таганрог</button>
+        <button onclick="citySelected({id:2123628,name:'Магадан'})">Магадан</button>
+    </div>
+</div>
+<div class="content">
+    <div class="info-block">
+        <ul class="weather-info">
+            <li class="weather-info-row">
+                <div class="weather-info-row__title">Температура</div>
+                <div class="weather-info-row__value" id="tempValue"></div>
+                <div class="weather-info-row__measure">°С</div>
+            </li>
+            <li class="weather-info-row">
+                <div class="weather-info-row__title">Ощущается как</div>
+                <div class="weather-info-row__value" id="feelsLikeTempValue"></div>
+                <div class="weather-info-row__measure">°С</div>
+            </li>
+            <li class="weather-info-row">
+                <div class="weather-info-row__title">Давление</div>
+                <div class="weather-info-row__value" id="pressure"></div>
+                <div class="weather-info-row__measure">мм.рт.ст</div>
+            </li>
+            <li class="weather-info-row">
+                <div class="weather-info-row__title">Влажность</div>
+                <div class="weather-info-row__value" id="humidity"></div>
+                <div class="weather-info-row__measure">%</div>
+            </li>
+        </ul>
+        <div class="city-info">
+            <a id="infoLink" target="_blank">О городе</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
